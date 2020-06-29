@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceActivity">
+
+    <LinearLayout
+        android:id="@+id/device_buttons_layout"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/device_get_contacts"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Contacts"/>
+            <Button
+                android:id="@+id/device_get_calllog"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Call Log"/>
+            <Button
+                android:id="@+id/device_get_filelist"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="File List"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/device_send_toast"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Toast"/>
+            <Button
+                android:id="@+id/device_play_music"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Play"/>
+            <Button
+                android:id="@+id/device_stop_music"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Stop"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/device_send_vibrate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Vibrate"/>
+            <Button
+                android:id="@+id/device_get_file"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Get File"/>
+            <Button
+                android:id="@+id/device_get_speech"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Speech"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/files_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:dividerHeight="2dp"
+        android:layout_below="@id/device_buttons_layout"/>
+
+</RelativeLayout>
